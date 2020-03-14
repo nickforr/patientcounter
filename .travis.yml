@@ -2,6 +2,9 @@ language: r
 
 r_packages:
   - covr
+  - data.table # so data.table tests will get checked
+  - lubridate
+  - testthat
 
 after_success:
   - Rscript -e 'library(covr); codecov()'
